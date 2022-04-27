@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Read</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <div>
+        <a href="/landing/update/{{ post.id }}/">수정</a>
+    </div>
+    <div>
+        <a href="/landing/read-all/">목록으로</a>
+    </div>
+    <div>
+        <a href="/landing/delete/{{ post.id }}/">지우기</a>
+    </div>
+    <!-- <h1>System Error</h1>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi vero explicabo perferendis minima neque, ipsa repellat. Doloribus, quisquam reprehenderit commodi repudiandae perferendis, sed corporis inventore error at sapiente aliquid aut?</P> -->
+</body>
+</html>

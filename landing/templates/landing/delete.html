@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Delete</title>
+</head>
+<body>
+    <p>Delete: {{ post.title }} 진짜 지울껴??</p>
+    <form action="{% url 'landing:delete' post.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="응 지워!">
+    </form>
+    <!-- <form action="/landing/read/{{ post.id }}/" method="get">
+        <input type="submit" value="돌아갈래">
+    </form> -->
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Create</title>
+</head>
+<body>
+   <form action="{% url 'landing:create' %}" 
+         id="post-write" 
+         method="post"
+         enctype="multipart/form-data"
+    >
+
+
+        {% csrf_token %}
+        제목: <input type="text" name="title" value="hello">
+        <div>
+            <input type="file" name="image">
+        </div>
+    
+         <input type="submit" value="업로드">
+   </form>
+    <textarea name="content" form="post-write">내용을 입력하세요</textarea>
+    <div>
+        <a href="/landing/read-all/">목록으로</a>
+    </div>
+
+</body>
+</html>
